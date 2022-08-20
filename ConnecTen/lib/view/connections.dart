@@ -164,14 +164,14 @@ class _ConnectionsState extends State<Connections> {
       child: Container(
           alignment: Alignment.centerLeft,
           height: Get.height * 0.1,
-          padding: EdgeInsets.all(10),
+          padding: EdgeInsets.symmetric(vertical: 10,horizontal: 20),
           margin: EdgeInsets.only(bottom: 20),
           decoration: BoxDecoration(
             color: Color(0xffEEF7FE),
             borderRadius: BorderRadius.circular(20),
           ),
           child: Column(
-            //mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
