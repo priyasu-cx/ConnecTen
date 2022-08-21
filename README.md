@@ -83,7 +83,7 @@
 [![App screenshot][image-3]]()
 [![App screenshot][product-screenshot]]()
 [![App screenshot][image-2]]()
-[![App screenshot][image-4]]()
+<!-- [![App screenshot][image-4]]() -->
 
 There are many ways to connect with everyone in any meet-ups or gatherings; however, I didn't find it easy and that really suited my needs so I created this enhanced app. I want to create a connection building ap so amazing that it'll be the last one you ever need -- I think this is it.
 
