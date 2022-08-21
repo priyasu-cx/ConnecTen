@@ -80,7 +80,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![App screenshot][product-screenshot]]()
 
 There are many ways to connect with everyone in any meet-ups or gatherings; however, I didn't find it easy and that really suited my needs so I created this enhanced app. I want to create a connection building ap so amazing that it'll be the last one you ever need -- I think this is it.
 
@@ -226,7 +226,7 @@ Project Link: [https://github.com/priyasu-cx/ConnecTen](https://github.com/priya
 [issues-url]: https://github.com/priyasu-cx/ConnecTen/issues
 [license-shield]: https://img.shields.io/github/license/priyasu-cx/ConnecTen
 [license-url]: https://github.com/priyasu-cx/ConnecTen/blob/main/LICENSE
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: App%20Interface/image%204.png
 [Flutter]: https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white
 [Flutter-url]: https://flutter.dev/
 [Figma]: https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white
