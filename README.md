@@ -70,7 +70,6 @@
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -154,11 +153,10 @@ Make sure the required frameworks are installed
 <!-- USAGE EXAMPLES -->
 ## Usage
 
+Use this app to help seamlessly connect with everyone present in any gatherings or in-person meet-ups. The app lets you sign in using your Google account and has a toggle button to switch between advertise and discover modes. Use the desired modes to let the app collect informations about people nearby and list it to you. Add to your connections to see their information in future too. 
 
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+_Try the app, [Download](https://bit.ly/ConnecTen)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -167,15 +165,13 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
+- [x] Build hack to utilise Nearby connections API.
+- [x] Add feature to let connect users.
+- [x] Manage user login state.
+- [ ] Share connections through other applications.
+- [ ] Dark mode
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/priyasu-cx/ConnecTen/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -211,30 +207,13 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Shubhayu Majumdar - [@shubhayu64](https://twitter.com/shubhayu64) - majumdarshubhayu@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Priyasu Guin - [@CODEXposer25](https://twitter.com/CODEXposer25) - priyasuguin.stu@gmail.com
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+Project Link: [https://github.com/priyasu-cx/ConnecTen](https://github.com/priyasu-cx/ConnecTen)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
