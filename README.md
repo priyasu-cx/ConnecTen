@@ -230,7 +230,7 @@ Project Link: [https://github.com/priyasu-cx/ConnecTen](https://github.com/priya
 [license-url]: https://github.com/priyasu-cx/ConnecTen/blob/main/LICENSE
 [product-screenshot]: App%20Interface/pic%203%20(1).jpeg
 [image-2]: App%20Interface/pic%208%20(1).jpeg
-[image-3]: App Interface/pic 2 (1).jpeg
+[image-3]: App%20Interface/pic%202%20(1).jpeg
 [Flutter]: https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white
 [Flutter-url]: https://flutter.dev/
 [Figma]: https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white
