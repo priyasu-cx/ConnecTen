@@ -38,6 +38,8 @@
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a> -->
     <br />
     <br />
+    <a href="https://bit.ly/ConnecTen">Try App</a>
+    ·
     <a href="https://youtu.be/3xVn-h5GEZk">View Demo</a>
     ·
     <a href="https://github.com/priyasu-cx/ConnecTen/issues">Report Bug</a>
