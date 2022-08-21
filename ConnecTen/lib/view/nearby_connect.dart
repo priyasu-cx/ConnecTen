@@ -81,8 +81,6 @@ class _NearbyConnectState extends State<NearbyConnect> {
 
   @override
   Widget build(BuildContext context) {
-    // final cp = context.read<ConnectionProvider>();
-    // final sp = context.read<SignInProvider>();
 
 
     print("Outside check -> ");
@@ -161,19 +159,6 @@ class _NearbyConnectState extends State<NearbyConnect> {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // Align(
-                //   alignment: Alignment.centerLeft,
-                //   child: CircleAvatar(
-                //     radius: Get.width * 0.08,
-                //     backgroundColor: primarybgcolor,
-                //     backgroundImage: AssetImage("assets/Avatar.png"),
-                //     //foregroundImage: NetworkImage(sp.imageUrl!),
-                //   ),
-                // ),
-                // Align(
-                //   alignment: Alignment.center,
-                //   child: Text(name),
-                // )
                 Text(
                   name,
                   //textAlign: TextAlign.start,

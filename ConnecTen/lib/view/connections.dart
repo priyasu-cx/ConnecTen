@@ -87,11 +87,6 @@ class _ConnectionsState extends State<Connections> {
     // final datacount = GetStorage();
 
     if (isDone == false) {
-      // var data = getConnectionList(sp.uid!);
-      // print(data);
-      // print("^^^^^^");
-      // print(datacount.read("connectedList"));
-      // var connectList = datacount.read("connectedList");
       getallData(sp.uid!);
     }
     super.initState();

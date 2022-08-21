@@ -3,7 +3,6 @@ import 'package:connecten/utils/colors.dart';
 import 'package:connecten/view/Nav_Drawer/menu.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sliding_switch/sliding_switch.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
@@ -24,28 +23,18 @@ class _ProfileState extends State<Profile> {
   var bio = "";
 
   Future getdata() async {
-    // final SharedPreferences sp = await SharedPreferences.getInstance();
     final datacount = GetStorage();
-    // fullname = sp.getString("fullname");
-    // imageUrl = sp.getString("imageUrl");
-    // designation = sp.getString("designation");
-    // bio = sp.getString("bio");
     fullname = datacount.read("fullname");
     designation = datacount.read("designation");
     bio = datacount.read("bio");
     imageUrl = datacount.read("imageUrl");
-    // print("Test Test" + fullname);
   }
 
   @override
   Widget build(BuildContext context) {
     final sp = context.read<SignInProvider>();
     final cp = context.read<ConnectionProvider>();
-    // print(sp.fullname);
     getdata();
-    // var imageUrl = sp.imageUrl!;
-    // var degignation = sp.designation!;
-    // var bio = sp.bio!;
 
     setState(() {
       cp.enableDiscovery(sp.uid, context);
@@ -138,16 +127,6 @@ class _ProfileState extends State<Profile> {
                                     backgroundImage: NetworkImage(sp.imageUrl),
                                   ),
                           ),
-                          // CircleAvatar(
-                          //   radius: Get.width * 0.1,
-                          //   backgroundColor: primarybgcolor,
-                          //   backgroundImage: AssetImage("assets/Avatar.png"),
-                          //   foregroundImage: sp.imageUrl == null
-                          //       ? AssetImage("assets/animation.gif")
-                          //       : NetworkImage(sp.imageUrl),
-                          //   //foregroundImage: sp.imageUrl == null ? AssetImage("assets/Avatar.png") : NetworkImage(sp.imageUrl),
-                          //   // foregroundImage: NetworkImage(sp.imageUrl!),
-                          // ),
                           SizedBox(
                             height: Get.height * 0.01,
                           ),
@@ -239,28 +218,6 @@ class _ProfileState extends State<Profile> {
         ));
   }
 
-  //Future getallData() async {}
-
-  // Future openDialog(image, text) => showDialog(
-  //     context: context,
-  //     builder: (context) =>AlertDialog(
-  //       shape: RoundedRectangleBorder(
-  //         borderRadius: BorderRadius.circular(20),
-  //       ),
-  //       title: Text(text+" Link"),
-  //       content: TextField(
-  //         autofocus: true,
-  //         decoration: InputDecoration(),
-  //       ),
-  //       actions: [
-  //         TextButton(
-  //             onPressed: (){},
-  //             child: Text('SUBMIT')
-  //         )
-  //       ],
-  //     )
-  // );
-
   Widget social(context, index, image, text, link) {
     return GestureDetector(
       onTap: () {
@@ -310,10 +267,6 @@ class _ProfileState extends State<Profile> {
         builder: (context) {
           final sp = context.read<SignInProvider>();
           final myController = TextEditingController();
-          // myController.text = index == 1 ? sp.linkedIn! : index == 2 ? sp.github! :
-          // index == 3 ? sp.portfolio!: sp.twitter!;
-          // myController.text == "" ? myController.text = "Give link here": myController.text = index == 1 ? sp.linkedIn! : index == 2 ? sp.github! :
-          // index == 3 ? sp.portfolio!: sp.twitter!;
           return Dialog(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20)),
@@ -336,8 +289,6 @@ class _ProfileState extends State<Profile> {
                               ),
                             ),
                             TextFormField(
-                              // initialValue: index == 1 ? sp.linkedIn! : index == 2 ? sp.github! :
-                              // index == 3 ? sp.portfolio!: sp.twitter!,
                               controller: myController,
                               autofocus: true,
                               decoration: InputDecoration(

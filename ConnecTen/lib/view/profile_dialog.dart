@@ -1,7 +1,6 @@
 import 'package:connecten/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 Future ProfileDialog(allUserData, context) => showDialog(
@@ -49,18 +48,6 @@ Future ProfileDialog(allUserData, context) => showDialog(
                           allUserData["portfolio"]),
                       social_link(context, 4, "assets/twitter.png", "Twitter",
                           allUserData["twitter"]),
-                      // Row(
-                      //     mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      //     children: [
-                      //       social_link(context, 1, "assets/linkedin.png", "Linkedin", "link"),
-                      //       social_link(context, 2, "assets/github.png", "Github", "link"),
-                      //     ]),
-                      // Row(
-                      //     mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      //     children: [
-                      //       social_link(context,3, "assets/website.png", "Portfolio", "link"),
-                      //       social_link(context,4, "assets/twitter.png", "Twitter", "link"),
-                      //     ]),
                     ],
                   ),
                 )
@@ -80,20 +67,6 @@ Widget social_link(context, index, image, text, link) {
     child: Stack(
       alignment: Alignment.center,
       children: [
-        // Container(
-        //   alignment: Alignment.topRight,
-        //   child: IconButton(
-        //     alignment: Alignment.topRight,
-        //     onPressed: () {
-        //       openDialog(image, text);
-        //     },
-        //     icon: FaIcon(
-        //       FontAwesomeIcons.penToSquare,
-        //       color: arrowcolor,
-        //     ),
-        //     iconSize: 15,
-        //   ),
-        // ),
         GestureDetector(
           onTap: () async {
             if (link == "") {

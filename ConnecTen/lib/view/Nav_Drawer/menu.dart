@@ -74,13 +74,6 @@ class _MenuState extends State<Menu> {
               SizedBox(
                 height: Get.height * 0.03,
               ),
-              // DrawerItem(
-              //     name: 'Setting',
-              //     icon: Icons.settings,
-              //     onPressed: () => onItemPressed(context, index: 3)),
-              // SizedBox(
-              //   height: Get.height * 0.03,
-              // ),
               DrawerItem(
                   name: 'Log out',
                   icon: Icons.logout,
@@ -131,23 +124,7 @@ class _MenuState extends State<Menu> {
 
                 ],
               )
-              // Container(
-              //   child: Column(
-              //     mainAxisAlignment: MainAxisAlignment.end,
-              //     crossAxisAlignment: CrossAxisAlignment.end,
-              //     children: [
-              //       Row(
-              //         children: [
-              //           FaIcon(FontAwesomeIcons.fileContract, color: Colors.black,),
-              //           TextButton(onPressed: (){}, child: Text(
-              //             "Licenses", style: TextStyle(fontWeight: FontWeight.w600),
-              //           ))
-              //
-              //         ],
-              //       )
-              //     ],
-              //   )
-              // )
+
             ],
           ),
         ),
@@ -172,11 +149,6 @@ class _MenuState extends State<Menu> {
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => const Profile()));
         break;
-
-      // case 3:
-      //   Navigator.push(
-      //       context, MaterialPageRoute(builder: (context) => Nearby_test()));
-      //   break;
 
       case 4:
         sp.userSignOut();

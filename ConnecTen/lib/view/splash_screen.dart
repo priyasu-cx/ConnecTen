@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'package:connecten/provider/sign_in_provider.dart';
 import 'package:connecten/view/login_screen.dart';
-import 'package:connecten/view/nearby_connect.dart';
 import 'package:connecten/view/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

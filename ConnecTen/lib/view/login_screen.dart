@@ -1,13 +1,10 @@
 import 'package:connecten/view/form_screen.dart';
 import 'package:connecten/view/profile.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:connecten/provider/internet_provider.dart';
 import 'package:connecten/provider/sign_in_provider.dart';
 import 'package:connecten/utils/snack_bar.dart';
-import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:get_storage/get_storage.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({Key? key}) : super(key: key);
@@ -25,8 +22,6 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Stack(
-        // mainAxisAlignment: MainAxisAlignment.center,
-        // crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Image.asset(
             "assets/login.png",
@@ -141,13 +136,11 @@ class _LoginPageState extends State<LoginPage> {
             if (value == true) {
               //await GetStorage.init();
               sp.setSignIn();
-              await sp.getUserDataFromFirestore().then((value) async{
+              await sp.getUserDataFromFirestore().then((value) async {
                 await sp.saveDataToSharedPreferences();
                 await sp.readDataFromSharedPreferences();
                 handleAfterSignIn();
               });
-
-
             } else {
               sp.saveDataToFirestore().then((value) {
                 sp
