@@ -38,6 +38,8 @@
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a> -->
     <br />
     <br />
+    <a href="https://bit.ly/ConnecTen">Try App</a>
+    ·
     <a href="https://youtu.be/3xVn-h5GEZk">View Demo</a>
     ·
     <a href="https://github.com/priyasu-cx/ConnecTen/issues">Report Bug</a>
@@ -78,7 +80,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![App screenshot][product-screenshot]]()
 
 There are many ways to connect with everyone in any meet-ups or gatherings; however, I didn't find it easy and that really suited my needs so I created this enhanced app. I want to create a connection building ap so amazing that it'll be the last one you ever need -- I think this is it.
 
@@ -97,14 +99,12 @@ Of course, no one app will serve all purpose since your needs may be different. 
 
 Here are the major frameworks/libraries used to bootstrap our project.
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* [![Flutter][Flutter]][Flutter-url]
+* [![Figma][Figma]][Figma-url]
+* [![Firebase][Firebase]][Firebase-url]
+* [![Google Analytics][Google-analytics]][Google-analytics-url]
+* [![Font Awesome][font-awesome]][Font-awesome-url]
+* [![Gradle][Gradle]][Gradle-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -226,20 +226,16 @@ Project Link: [https://github.com/priyasu-cx/ConnecTen](https://github.com/priya
 [issues-url]: https://github.com/priyasu-cx/ConnecTen/issues
 [license-shield]: https://img.shields.io/github/license/priyasu-cx/ConnecTen
 [license-url]: https://github.com/priyasu-cx/ConnecTen/blob/main/LICENSE
-[product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
+[product-screenshot]: App%20Interface/image%204.png
+[Flutter]: https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white
+[Flutter-url]: https://flutter.dev/
+[Figma]: https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white
+[Figma-url]: https://www.figma.com/
+[Firebase]: https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black
+[Firebase-url]: https://firebase.google.com/
+[Google-analytics]: https://img.shields.io/badge/Google%20Analytics-E37400?style=for-the-badge&logo=google%20analytics&logoColor=white
+[Google-analytics-url]: https://analytics.google.com/analytics/web/
+[Font-awesome]: https://img.shields.io/badge/Font_Awesome-339AF0?style=for-the-badge&logo=fontawesome&logoColor=white
+[Font-awesome-url]: https://fontawesome.com/
+[Gradle]: https://img.shields.io/badge/gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white
+[Gradle-url]: https://gradle.org/
