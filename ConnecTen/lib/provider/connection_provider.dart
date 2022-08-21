@@ -43,7 +43,7 @@ class ConnectionProvider extends ChangeNotifier {
           if (_connections.contains(name) == false) {
             _connections.add(name);
           }
-          Get.snackbar("New Connection Found", _connections.toString());
+          Get.snackbar("New Connection Found", "");
         },
         onEndpointLost: (id) {},
       );

@@ -6,7 +6,7 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:get_storage/get_storage.dart';
 
 class SignInProvider extends ChangeNotifier {
-  // final datacount = GetStorage();
+  final datacount = GetStorage();
   // Instance of firebase auth, google
   final FirebaseAuth firebaseAuth = FirebaseAuth.instance;
   final GoogleSignIn googleSignIn = GoogleSignIn();
@@ -68,7 +68,7 @@ class SignInProvider extends ChangeNotifier {
   }
 
   Future setFormData(String name, String designation, String bio) async {
-    final datacount = GetStorage();
+    // final datacount = GetStorage();
     //final datacount = GetStorage();
     //final SharedPreferences shared = await SharedPreferences.getInstance();
     _fullname = name;
@@ -84,7 +84,7 @@ class SignInProvider extends ChangeNotifier {
   }
 
   Future setFormDone() async {
-    final datacount = GetStorage();
+    // final datacount = GetStorage();
     //final SharedPreferences shared = await SharedPreferences.getInstance();
     //final datacount = GetStorage();
     //shared.setBool("form_done", true);
@@ -94,7 +94,7 @@ class SignInProvider extends ChangeNotifier {
   }
 
   Future checkFormDone() async {
-    final datacount = GetStorage();
+    // final datacount = GetStorage();
     //final SharedPreferences shared = await SharedPreferences.getInstance();
     _isFormDone = datacount.read("form_done") ?? false;
     //_isFormDone = shared.getBool("form_done") ?? false;
@@ -102,7 +102,7 @@ class SignInProvider extends ChangeNotifier {
   }
 
   Future checkSignInUser() async {
-    final datacount = GetStorage();
+    // final datacount = GetStorage();
     //final SharedPreferences shared = await SharedPreferences.getInstance();
     //_isSignedIn = shared.getBool("signed_in") ?? false;
     _isSignedIn = datacount.read("signed_in") ?? false;
@@ -110,7 +110,7 @@ class SignInProvider extends ChangeNotifier {
   }
 
   Future setSignIn() async {
-    final datacount = GetStorage();
+    // final datacount = GetStorage();
     //final SharedPreferences shared = await SharedPreferences.getInstance();
     // shared.setBool("signed_in", true);
     datacount.write("signed_in", true);
@@ -119,7 +119,7 @@ class SignInProvider extends ChangeNotifier {
   }
 
   Future signInWithGoogle() async {
-    final datacount = GetStorage();
+    // final datacount = GetStorage();
     final GoogleSignInAccount? googleSignInAccount =
         await googleSignIn.signIn();
 
@@ -172,7 +172,7 @@ class SignInProvider extends ChangeNotifier {
   }
 
   Future setLinkedIn(String linkedInUrl) async {
-    final datacount = GetStorage();
+    // final datacount = GetStorage();
     //final SharedPreferences sp = await SharedPreferences.getInstance();
     _linkedIn = linkedInUrl;
     //await sp.setString("linkedIn", _linkedIn??"");
@@ -186,7 +186,7 @@ class SignInProvider extends ChangeNotifier {
   }
 
   Future setGithub(String githubUrl) async {
-    final datacount = GetStorage();
+    // final datacount = GetStorage();
     //final SharedPreferences sp = await SharedPreferences.getInstance();
     _github = githubUrl;
     //await sp.setString("github", _github??"");
@@ -200,7 +200,7 @@ class SignInProvider extends ChangeNotifier {
   }
 
   Future setPortfolio(String portfolioUrl) async {
-    final datacount = GetStorage();
+    // final datacount = GetStorage();
     // final SharedPreferences sp = await SharedPreferences.getInstance();
     _portfolio = portfolioUrl;
     // await sp.setString("portfolio", _portfolio??"");
@@ -214,7 +214,7 @@ class SignInProvider extends ChangeNotifier {
   }
 
   Future setTwitter(String twitterUrl) async {
-    final datacount = GetStorage();
+    // final datacount = GetStorage();
     // final SharedPreferences sp = await SharedPreferences.getInstance();
     _twitter = twitterUrl;
     // await sp.setString("twitter", _twitter??"");
@@ -228,7 +228,7 @@ class SignInProvider extends ChangeNotifier {
   }
 
   Future addConnection(String? uid) async {
-    final datacount = GetStorage();
+    // final datacount = GetStorage();
 
     final DocumentReference ref =
         FirebaseFirestore.instance.collection("users").doc(_uid);
@@ -245,7 +245,7 @@ class SignInProvider extends ChangeNotifier {
   }
 
   Future getConnectionList(String? uid) async {
-    final datacount = GetStorage();
+    // final datacount = GetStorage();
     final DocumentReference ref =
         FirebaseFirestore.instance.collection("users").doc(_uid);
     await ref.get().then((DocumentSnapshot snapshot) {
@@ -341,7 +341,7 @@ class SignInProvider extends ChangeNotifier {
 
   // Save to shared preferences
   Future saveDataToSharedPreferences() async {
-    final datacount = GetStorage();
+    // final datacount = GetStorage();
     //final SharedPreferences sp = await SharedPreferences.getInstance();
     // await sp.setString("name", _name??"");
     // await sp.setString("email", _email??"");
@@ -362,7 +362,7 @@ class SignInProvider extends ChangeNotifier {
   }
 
   Future readDataFromSharedPreferences() async {
-    final datacount = GetStorage();
+    // final datacount = GetStorage();
     // final SharedPreferences sp = await SharedPreferences.getInstance();
     // _name = sp.getString("name");
     // _email = sp.getString("email");
@@ -404,9 +404,18 @@ class SignInProvider extends ChangeNotifier {
   }
 
   Future clearStoredData() async {
-    final datacount = GetStorage();
+    // final datacount = GetStorage();
     // final SharedPreferences shared = await SharedPreferences.getInstance();
     // shared.clear();
-    datacount.erase();
+    // datacount.erase();
+    datacount.remove("name");
+    datacount.remove("email");
+    datacount.remove("email");
+    datacount.remove("uid");
+    datacount.remove("imageUrl");
+    datacount.remove("linkedIn");
+    datacount.remove("github");
+    datacount.remove("portfolio");
+    datacount.remove("twitter");
   }
 }
