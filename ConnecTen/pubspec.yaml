@@ -1,9 +1,9 @@
 name: connecten
 description: A new Flutter project.
 
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
-version: 1.0.0+1
+version: 1.2.0+1
 
 environment:
   sdk: ">=2.17.1 <3.0.0"
@@ -16,17 +16,24 @@ dependencies:
   firebase_core: ^1.20.1
   flutter:
     sdk: flutter
+  flutter_launcher_icons: ^0.10.0
+  font_awesome_flutter: null
+  get: null
+  get_storage: null
   google_fonts: ^3.0.1
   google_sign_in: ^5.4.1
-  provider: ^6.0.3
-  get:
-  font_awesome_flutter:
-  sliding_switch:
-  shared_preferences: ^2.0.15
+  image_picker: null
   nearby_connections: ^3.2.0
-  image_picker:
-  get_storage:
-  url_launcher:
+  provider: ^6.0.3
+  rename: ^2.0.1
+  shared_preferences: ^2.0.15
+  sliding_switch: null
+  url_launcher: null
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/logo.png"
 
 dev_dependencies:
   flutter_lints: ^2.0.0
@@ -34,7 +41,6 @@ dev_dependencies:
     sdk: flutter
 
 flutter:
-
   uses-material-design: true
   assets:
     - assets/
