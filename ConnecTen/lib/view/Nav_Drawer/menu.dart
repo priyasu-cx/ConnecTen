@@ -198,7 +198,7 @@ class _MenuState extends State<Menu> {
         children: [
           CircleAvatar(
             radius: Get.height * 0.055,
-            backgroundImage: NetworkImage(sp.imageUrl),
+            backgroundImage: NetworkImage(imageUrl),
           ),
           SizedBox(
             width: Get.height * 0.03,

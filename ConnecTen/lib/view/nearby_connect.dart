@@ -51,14 +51,16 @@ class _NearbyConnectState extends State<NearbyConnect> {
 
     for (var uid in uidList) {
       // Get.snackbar("Uid", uid);
-      print(uid);
-      await fetchUserData(uid).then((value) {
-        allData.add(value);
-        // print(value["fullname"]);
-        // allUserData[i]["fullname"]
-        //   // Get.snackbar(
-        //   // "If fullname exists:", value.containsKey("fullname").toString());
-      });
+      final alphanumeric = RegExp(r'^[a-zA-Z0-9_]*$');
+      print("Before if "+ uid);
+      if(alphanumeric.hasMatch(uid) == true){
+        print(uid);
+        await fetchUserData(uid).then((value) {
+          // "^[a-zA-Z0-9_]*$"
+
+          allData.add(value);
+        });
+      }
       //print(uid);
 
     }
@@ -140,7 +142,9 @@ class _NearbyConnectState extends State<NearbyConnect> {
 
   Widget Connect(allUserData, name, designation) {
     final sp = context.read<SignInProvider>();
-    return Container(
+    return InkWell(
+      onTap: (){ProfileDialog(allUserData, context);},
+      child: Container(
         alignment: Alignment.center,
         padding: EdgeInsets.symmetric(vertical: 10,horizontal: 20),
         margin: EdgeInsets.only(bottom: 20),
@@ -202,7 +206,7 @@ class _NearbyConnectState extends State<NearbyConnect> {
                   child: IconButton(
                     onPressed: () async{
                       await sp.addConnection(allUserData["uid"]);
-                      ProfileDialog(allUserData, context);
+                      Get.snackbar("Connection Added", allUserData["fullname"]);
                     },
                     icon: FaIcon(
                       FontAwesomeIcons.userPlus,
@@ -213,6 +217,6 @@ class _NearbyConnectState extends State<NearbyConnect> {
               ],
             )
           ],
-        ));
+        )));
   }
 }
