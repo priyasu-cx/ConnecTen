@@ -171,6 +171,7 @@ _Try the app, [Download](https://bit.ly/ConnecTen)_
 - [x] Build hack to utilise Nearby connections API.
 - [x] Add feature to let connect users.
 - [x] Manage user login state.
+- [x] Upcoming events page.
 - [ ] Share connections through other applications.
 - [ ] Dark mode
 
