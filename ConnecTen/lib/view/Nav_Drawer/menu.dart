@@ -2,6 +2,7 @@ import 'package:connecten/provider/sign_in_provider.dart';
 import 'package:connecten/utils/colors.dart';
 import 'package:connecten/view/Nav_Drawer/drawer_item.dart';
 import 'package:connecten/view/connections.dart';
+import 'package:connecten/view/events.dart';
 import 'package:connecten/view/login_screen.dart';
 import 'package:connecten/view/nearby_connect.dart';
 import 'package:connecten/view/profile.dart';
@@ -66,6 +67,13 @@ class _MenuState extends State<Menu> {
               SizedBox(
                 height: Get.height * 0.03,
               ),
+              DrawerItem(
+                  name: 'Upcoming Events',
+                  icon: Icons.event_available,
+                  onPressed: () => onItemPressed(context, index: 3)),
+              SizedBox(
+                height: Get.height * 0.03,
+              ),
               const Divider(
                 thickness: 1,
                 height: 10,
@@ -78,7 +86,7 @@ class _MenuState extends State<Menu> {
                   name: 'Log out',
                   icon: Icons.logout,
                   onPressed: () => onItemPressed(context, index: 4)),
-              SizedBox(height: Get.height*0.2),
+              SizedBox(height: Get.height*0.13),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -148,6 +156,11 @@ class _MenuState extends State<Menu> {
       case 2:
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => const Profile()));
+        break;
+
+      case 3:
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => const UpEvents()));
         break;
 
       case 4:

@@ -22,10 +22,9 @@ dependencies:
   get_storage: null
   google_fonts: ^3.0.1
   google_sign_in: ^5.4.1
-  image_picker: null
-  nearby_connections: ^3.2.0
   provider: ^6.0.3
   rename: ^2.0.1
+  nearby_connections:
   shared_preferences: ^2.0.15
   sliding_switch: null
   url_launcher: null

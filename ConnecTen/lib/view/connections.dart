@@ -191,7 +191,8 @@ class _ConnectionsState extends State<Connections> {
                 ),
               ),
             ],
-          )),
+          )
+      ),
     );
   }
 }

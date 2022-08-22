@@ -61,6 +61,11 @@ class SignInProvider extends ChangeNotifier {
   List<String?> _connectedList = [];
   List<String?> get connectedList => _connectedList;
 
+  List<String?> _attendeeList = [];
+  List<String?> get attendeeList => _attendeeList;
+
+
+
   SignInProvider() {
     checkSignInUser();
     readDataFromSharedPreferences();
@@ -103,6 +108,8 @@ class SignInProvider extends ChangeNotifier {
     _isSignedIn = true;
     notifyListeners();
   }
+
+  
 
   Future signInWithGoogle() async {
     final GoogleSignInAccount? googleSignInAccount =
@@ -218,6 +225,23 @@ class SignInProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+  Future addToEvent(String? eventId) async {
+    print("Sign in " + eventId!);
+    final DocumentReference ref =
+        FirebaseFirestore.instance.collection("events").doc(eventId);
+    await ref.get().then((DocumentSnapshot snapshot) {
+      var eventData = snapshot["Attendees"];
+      _attendeeList = List<String?>.from(eventData);
+    });
+    if (_attendeeList.contains(_uid) == false) {
+      _attendeeList.add(_uid);
+
+      await ref.update({"Attendees": _attendeeList});
+      datacount.write("Attendees", _attendeeList);
+    }
+    notifyListeners();
+  }
+
   Future getConnectionList(String? uid) async {
     // final datacount = GetStorage();
     final DocumentReference ref =
@@ -249,6 +273,17 @@ class SignInProvider extends ChangeNotifier {
       _connectedList = connectedData.cast<String?>();
     });
     notifyListeners();
+  }
+
+  Future getAttendees(String? eventId) async {
+    await FirebaseFirestore.instance
+        .collection("events")
+        .doc(eventId)
+        .get()
+        .then((DocumentSnapshot snapshot) async {
+      var attendeeData = snapshot["Attendees"];
+      _attendeeList = attendeeData.cast<String?>();
+    });
   }
 
   Future<Map<String, String?>> fetchUserDataFirestore(String uid) async {
