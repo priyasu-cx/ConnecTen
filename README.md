@@ -134,7 +134,7 @@ Make sure the required frameworks are installed
    ```sh
    git clone https://github.com/priyasu-cx/ConnecTen
    ```
-3. Install NPM packages
+3. Install Flutter packages
    ```sh
    flutter pub get
    ```
